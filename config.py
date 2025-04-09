@@ -29,16 +29,13 @@ PORT = os.environ.get("PORT", "6397")
 
 #Database 
 DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://ucik:ucik@cluster0.0l3r8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DB_NAME = os.environ.get("DATABASE_NAME", "becek")
+DB_NAME = os.environ.get("DATABASE_NAME", "mantan")
 
 #force sub channel id, if you want enable force sub
 FORCESUB_CHANNEL = int(os.environ.get("FORCESUB_CHANNEL", "-1002065151503"))
 FORCESUB_CHANNEL2 = int(os.environ.get("FORCESUB_CHANNEL2", "-1002273575059"))
 FORCESUB_CHANNEL3 = int(os.environ.get("FORCESUB_CHANNEL3", "-1001721745890"))
-FORCESUB_CHANNEL4 = int(os.environ.get("FORCESUB_CHANNEL4", "-1001979450020"))
-FORCESUB_CHANNEL5 = int(os.environ.get("FORCESUB_CHANNEL5", "-1002320116756"))
-FORCESUB_CHANNEL6 = int(os.environ.get("FORCESUB_CHANNEL6", "-1001841428029"))
-
+FORCESUB_CHANNEL4 = int(os.environ.get("FORCESUB_CHANNEL4", "-1002320116756"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
