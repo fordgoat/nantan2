@@ -10,7 +10,7 @@ from pyrogram.enums import ParseMode
 import sys
 from datetime import datetime
 
-from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCESUB_CHANNEL, FORCESUB_CHANNEL2, FORCESUB_CHANNEL3, FORCESUB_CHANNEL4, FORCESUB_CHANNEL5, FORCESUB_CHANNEL6, CHANNEL_ID, PORT
+from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCESUB_CHANNEL, FORCESUB_CHANNEL2, FORCESUB_CHANNEL3, FORCESUB_CHANNEL4, CHANNEL_ID, PORT
 
 pyrogram.utils.MIN_CHANNEL_ID = -1009147483647
 class Bot(Client):
@@ -82,32 +82,6 @@ class Bot(Client):
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning("Bot tidak dapat Mengambil link invite dari FORCE_SUB_CHANNEL4!")
                 self.LOGGER(__name__).warning(f"Pastikan @{self.username} adalah admin di Channel Tersebut, Chat ID F-Subs Channel Saat Ini: {FORCESUB_CHANNEL4}")
-                self.LOGGER(__name__).info("\nBot Berhenti. Gabung Group https://t.me/SharingUserbot untuk Bantuan")
-                sys.exit()       
-        if FORCESUB_CHANNEL5:
-            try:
-                link = (await self.get_chat(FORCESUB_CHANNEL5)).invite_link
-                if not link:
-                    await self.export_chat_invite_link(FORCESUB_CHANNEL5)
-                    link = (await self.get_chat(FORCESUB_CHANNEL5)).invite_link
-                self.invitelink5 = link
-            except Exception as a:
-                self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning("Bot tidak dapat Mengambil link invite dari FORCE_SUB_CHANNEL5!")
-                self.LOGGER(__name__).warning(f"Pastikan @{self.username} adalah admin di Channel Tersebut, Chat ID F-Subs Channel Saat Ini: {FORCESUB_CHANNEL5}")
-                self.LOGGER(__name__).info("\nBot Berhenti. Gabung Group https://t.me/SharingUserbot untuk Bantuan")
-                sys.exit()       
-        if FORCESUB_CHANNEL6:
-            try:
-                link = (await self.get_chat(FORCESUB_CHANNEL6)).invite_link
-                if not link:
-                    await self.export_chat_invite_link(FORCESUB_CHANNEL6)
-                    link = (await self.get_chat(FORCESUB_CHANNEL6)).invite_link
-                self.invitelink6 = link
-            except Exception as a:
-                self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning("Bot tidak dapat Mengambil link invite dari FORCE_SUB_CHANNEL6!")
-                self.LOGGER(__name__).warning(f"Pastikan @{self.username} adalah admin di Channel Tersebut, Chat ID F-Subs Channel Saat Ini: {FORCESUB_CHANNEL3}")
                 self.LOGGER(__name__).info("\nBot Berhenti. Gabung Group https://t.me/SharingUserbot untuk Bantuan")
                 sys.exit()       
         try:
